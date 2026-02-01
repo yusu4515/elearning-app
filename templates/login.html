@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>eラーニング農園 | HRプラント</title>
+    <style>
+        /* 農園をイメージしたグリーン系の配色 */
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0f7f2; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 40px; border-top: 5px solid #4caf50; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); width: 100%; max-width: 400px; text-align: center; }
+        h1 { color: #2e7d32; margin-bottom: 5px; font-size: 28px; }
+        .sub-title { color: #666; margin-bottom: 30px; font-size: 14px; }
+        .input-group { text-align: left; margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #333; font-size: 14px; }
+        input { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; box-sizing: border-box; font-size: 16px; transition: border-color 0.3s; }
+        input:focus { border-color: #4caf50; outline: none; }
+        button { width: 100%; padding: 14px; background: #4caf50; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background 0.3s; }
+        button:hover { background: #388e3c; }
+        .footer { margin-top: 25px; font-size: 12px; color: #999; }
+        .logo-icon { font-size: 40px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-icon">🌱</div>
+        <h1>eラーニング農園</h1>
+        <div class="sub-title">Produced by HR Plant</div>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label>ユーザーID</label>
+                <input type="text" name="username" placeholder="例: hr-plant-01" required>
+            </div>
+            <div class="input-group">
+                <label>パスワード</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit">入園する（ログイン）</button>
+        </form>
+        <div class="footer">&copy; 2026 HR Plant Co., Ltd.</div>
+    </div>
+</body>
+</html>
