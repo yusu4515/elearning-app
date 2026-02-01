@@ -1,23 +1,17 @@
 import os
-import psycopg2
-from flask import Flask, render_template, request, redirect, url_for, session
-from psycopg2.extras import RealDictCursor
-from dotenv import load_dotenv
-
-load_dotenv()
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'isms-security-key') # セキュリティキー
 
-# .envから読み込み
-DATABASE_URL = os.environ.get('DATABASE_URL')
-
-def get_db_connection():
-    return psycopg2.connect(DATABASE_URL)
-
+# サイトのトップ（https://.../）にアクセスしたときに login.html を表示する命令
 @app.route('/')
 def index():
-    return "E-Learning App is Running!" # まずは動作確認用
+    return render_template('login.html')
+
+# ログインボタンを押した後の動き
+@app.route('/login', methods=['POST'])
+def login():
+    return "eラーニング農園へようこそ！あなたのスキルを育てましょう。"
 
 if __name__ == '__main__':
     app.run(debug=True)
